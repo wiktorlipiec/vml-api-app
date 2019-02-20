@@ -1,6 +1,7 @@
 import React from 'react';
 import styled,{ createGlobalStyle } from 'styled-components';
 import background from '../../assets/images/pexels-photo-1070880.jpeg';
+import PropTypes from 'prop-types';
 
 const GlobalStyles = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
@@ -40,5 +41,9 @@ const Layout = props => (
         { props.children }
     </AppWrapper>
 );
+
+Layout.propTypes = {
+    children: PropTypes.node,
+}
 
 export default Layout;

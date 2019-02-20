@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const WarningWrapper = styled.div`
     display: block;
@@ -24,5 +25,9 @@ const Warning = props => (
         </WarningText>
     </WarningWrapper>
 );
+
+Warning.propTypes = {
+    warningText: PropTypes.string,
+}
 
 export default Warning;

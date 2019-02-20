@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import NameUser from '../NameUser/NameUser';
 
@@ -23,5 +24,10 @@ const Toolbar = props => (
         <NameUser name={ props.name } />
     </ToolbarWrapper>
 );
+
+Toolbar.propTypes = {
+    colorToolbar: PropTypes.string,
+    name: PropTypes.string,
+}
 
 export default Toolbar;

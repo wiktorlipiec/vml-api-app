@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const ModalBgWrapper = styled.div`
     position: fixed;
@@ -16,8 +17,14 @@ const ModalContainer = styled.div`
     left:50%;
     transform: translate(-50%,-50%);
     padding: 10px 50px;
-    width: 60vh;
+    width: 60vw;
     height: 80vh;
+
+    @media (max-width: 568px) {
+        width: 80vw;
+        height: 50vh;
+        padding: 5px 10px;
+    }
 `
 
 const ScrollBox = styled.div`
@@ -84,5 +91,12 @@ const Modal = props => (
         </ModalContainer>
     </ModalBgWrapper>
 );
+
+Modal.propTypes = {
+    onClickHandler: PropTypes.func,
+    imageProduct: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
+}
 
 export default Modal;

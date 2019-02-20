@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const ContainerWrapper = styled.div`
     position: relative;
@@ -16,5 +17,9 @@ const Container = props => (
         { props.children }
     </ContainerWrapper>
 );
+
+Container.propTypes = {
+    children: PropTypes.node,
+}
 
 export default Container;
